@@ -1,0 +1,139 @@
+{
+  "id": "com.example.gaugechart",
+  "version": "1.0.0",
+  "name": "Gauge Chart",
+  "description": "A custom widget for displaying a gauge chart",
+  "newInstancePrefix": "GaugeChart",
+  "icon": "https://example.com/gaugechart/icon.png",
+  "vendor": "ojohnsonolanrewaju",
+  "eula": "EULA",
+  "license": "1.0",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-example-gaugechart",
+      "url": "https://example.com/gaugechart/gaugechart.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    },
+    {
+      "kind": "styling",
+      "tag": "com-example-gaugechart-sps",
+      "url": "https://example.com/gaugechart/gaugechart_sps.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    },
+    {
+      "kind": "builder",
+      "tag": "com-example-gaugechart-bps",
+      "url": "https://example.com/gaugechart/gaugechart_bps.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "dataset": {
+      "type": "dataset",
+      "description": "Dataset",
+      "default": null
+    },
+    "measure": {
+      "type": "string",
+      "description": "Measure",
+      "default": ""
+    },
+    "filters": {
+      "type": "string",
+      "description": "Filters",
+      "default": ""
+    },
+    "minValue": {
+      "type": "number",
+      "description": "Minimum Value",
+      "default": 0
+    },
+    "maxValue": {
+      "type": "number",
+      "description": "Maximum Value",
+      "default": 100
+    },
+    "targetValue": {
+      "type": "number",
+      "description": "Target Value",
+      "default": 50
+    }
+  },
+  "methods": {
+    "setDataset": {
+      "description": "Sets the dataset for the Gauge chart.",
+      "parameters": [
+        {
+          "name": "dataset",
+          "type": "dataset",
+          "description": "Dataset"
+        }
+      ],
+      "body": "this.dataset = dataset;"
+    },
+    "setMeasure": {
+      "description": "Sets the measure for the Gauge chart.",
+      "parameters": [
+        {
+          "name": "measure",
+          "type": "string",
+          "description": "Measure"
+        }
+      ],
+      "body": "this.measure = measure;"
+    },
+    "setFilters": {
+      "description": "Sets the filters for the Gauge chart.",
+      "parameters": [
+        {
+          "name": "filters",
+          "type": "string",
+          "description": "Filters"
+        }
+      ],
+      "body": "this.filters = filters;"
+    },
+    "setMinValue": {
+      "description": "Sets the minimum value for the Gauge chart.",
+      "parameters": [
+        {
+          "name": "minValue",
+          "type": "number",
+          "description": "Minimum Value"
+        }
+      ],
+      "body": "this.minValue = minValue;"
+    },
+    "setMaxValue": {
+      "description": "Sets the maximum value for the Gauge chart.",
+      "parameters": [
+        {
+          "name": "maxValue",
+          "type": "number",
+          "description": "Maximum Value"
+        }
+      ],
+      "body": "this.maxValue = maxValue;"
+    },
+    "setTargetValue": {
+      "description": "Sets the target value for the Gauge chart.",
+      "parameters": [
+        {
+          "name": "targetValue",
+          "type": "number",
+          "description": "Target Value"
+        }
+      ],
+      "body": "this.targetValue = targetValue;"
+    }
+  },
+  "events": {
+    "onClick": {
+      "description": "Called when the user clicks the Gauge chart."
+    }
+  }
+}
