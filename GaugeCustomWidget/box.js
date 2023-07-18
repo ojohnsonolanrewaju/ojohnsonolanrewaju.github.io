@@ -52,7 +52,7 @@
 		        <svg viewBox="0 0 1000 500">
 			        <path d="M 950 500 A 450 450 0 0 0 50 500"></path>
 					<text class='percentage' text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">0</text>
-					<text class='target-value' text-anchor="middle" alignment-baseline="middle" x="500" y="350" font-size="40" font-weight="bold"></text>
+					<text class='target-value' text-anchor="middle" alignment-baseline="middle" x="500" y="380" font-size="40" font-weight="bold"></text>
 					<text class='title' text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal"></text>
   	            </svg>
 		      </div>
@@ -96,7 +96,7 @@
         this.$svg.innerHTML =
           '<path d="M 950 500 A 450 450 0 0 0 50 500"></path><text class="percentage" text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">' +
           rounded +
-          '</text><text class="target-value" text-anchor="middle" alignment-baseline="middle" x="500" y="350" font-size="40" font-weight="bold">' +
+          '</text><text class="target-value" text-anchor="middle" alignment-baseline="middle" x="500" y="380" font-size="40" font-weight="bold">' +
           targetValue +
           '</text><text class="title" text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal">' +
           info +
@@ -107,10 +107,10 @@
 
       // Update target tick position
       var targetAngle = (targetValue / 100) * 180 - 90;
-      var targetTick = this.polar_to_cartesian(500, 500, 450, targetAngle);
+      var targetTick = this.polar_to_cartesian(500, 100, 450, targetAngle);
       var targetLine = this.$svg.querySelector(".target-tick");
       targetLine.setAttribute("x1", 500);
-      targetLine.setAttribute("y1", 500);
+      targetLine.setAttribute("y1", 10);
       targetLine.setAttribute("x2", targetTick[0]);
       targetLine.setAttribute("y2", targetTick[1]);
     }
