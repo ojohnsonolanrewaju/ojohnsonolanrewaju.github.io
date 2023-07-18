@@ -39,6 +39,10 @@
 		.metric.participation text {
 		  fill: #27ae60;
 		}		
+		.metric.participation line.target-tick {
+		  stroke: #27ae60;
+		  stroke-width: 2;
+		}
 		</style>
 		
 		<div class="container">
@@ -48,6 +52,7 @@
 		        <svg viewBox="0 0 1000 500">
 			        <path d="M 950 500 A 450 450 0 0 0 50 500"></path>
 					<text class='percentage' text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">0</text>
+					<text class='target-value' text-anchor="middle" alignment-baseline="middle" x="500" y="350" font-size="40" font-weight="bold"></text>
 					<text class='title' text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal"></text>
   	            </svg>
 		      </div>
@@ -64,6 +69,7 @@
 
       this.$style = shadowRoot.querySelector("style");
       this.$svg = shadowRoot.querySelector("svg");
+      this.$targetValue = shadowRoot.querySelector(".target-value");
 
       this.addEventListener("click", (event) => {
         var event = new Event("onClick");
@@ -73,7 +79,7 @@
       this._props = {};
     }
 
-    render(val, info, color) {
+    render(val, info, color, targetValue) {
       var val1 = val * 0.01;
       var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
       var rounded = Math.round(val * 10) / 10;
@@ -84,10 +90,14 @@
           color +
           ";}.metric.participation text {fill: " +
           color +
-          ";}";
+          ";}.metric.participation line.target-tick {stroke: " +
+          color +
+          ";stroke-width: 2;}";
         this.$svg.innerHTML =
           '<path d="M 950 500 A 450 450 0 0 0 50 500"></path><text class="percentage" text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">' +
           rounded +
+          '</text><text class="target-value" text-anchor="middle" alignment-baseline="middle" x="500" y="350" font-size="40" font-weight="bold">' +
+          targetValue +
           '</text><text class="title" text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal">' +
           info +
           '</text><path d="' +
@@ -142,7 +152,11 @@
         this.$color = changedProperties["color"];
       }
 
-      this.render(this.$value, this.$info, this.$color);
+      if ("targetValue" in changedProperties) {
+        this.$targetValue = changedProperties["targetValue"];
+      }
+
+      this.render(this.$value, this.$info, this.$color, this.$targetValue);
     }
   }
 
