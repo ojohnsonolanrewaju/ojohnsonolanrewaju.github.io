@@ -40,7 +40,7 @@
 		  fill: #27ae60;
 		}		
 		.metric.participation line.target-tick {
-		  stroke: #27ae60;
+		  stroke: #e74c3c;
 		  stroke-width: 2;
 		}
 		</style>
