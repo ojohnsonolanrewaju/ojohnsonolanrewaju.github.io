@@ -107,10 +107,10 @@
 
       // Update target tick position
       var targetAngle = (targetValue / 100) * 180 - 90;
-      var targetTick = this.polar_to_cartesian(500, 100, 450, targetAngle);
+      var targetTick = this.polar_to_cartesian(500, 50, 450, targetAngle);
       var targetLine = this.$svg.querySelector(".target-tick");
       targetLine.setAttribute("x1", 500);
-      targetLine.setAttribute("y1", 50);
+      targetLine.setAttribute("y1", 80);
       targetLine.setAttribute("x2", targetTick[0]);
       targetLine.setAttribute("y2", targetTick[1]);
     }
