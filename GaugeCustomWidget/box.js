@@ -110,7 +110,7 @@
       var targetTick = this.polar_to_cartesian(500, 100, 450, targetAngle);
       var targetLine = this.$svg.querySelector(".target-tick");
       targetLine.setAttribute("x1", 500);
-      targetLine.setAttribute("y1", 100);
+      targetLine.setAttribute("y1", 150);
       targetLine.setAttribute("x2", targetTick[0]);
       targetLine.setAttribute("y2", targetTick[1]);
     }
