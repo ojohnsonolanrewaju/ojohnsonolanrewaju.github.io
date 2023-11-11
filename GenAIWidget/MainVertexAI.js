@@ -1,15 +1,13 @@
-// MainCustomVertexAI.js
-
 // Function for making an AJAX call to Vertex AI API
 const generateText = async (
   apiKey,
   projectId,
   modelId,
   prompt,
-  temperature,
   maxOutputTokens
 ) => {
   try {
+    const temperature = 0.5; // Hardcoded temperature value
     const response = await fetch(
       `https://us-central1-aiplatform.googleapis.com/v1/projects/${projectId}/locations/us-central1/publishers/google/models/${modelId}:serverStreamingPredict`,
       {
@@ -30,7 +28,7 @@ const generateText = async (
           ],
           parameters: {
             struct_val: {
-              temperature: { int_val: temperature },
+              temperature: { float_val: temperature },
               maxOutputTokens: { int_val: maxOutputTokens },
               // Add other parameters as needed
             },
@@ -59,7 +57,6 @@ class CustomVertexAIWidget extends HTMLElement {
     projectId,
     modelId,
     prompt,
-    temperature,
     maxOutputTokens
   ) {
     try {
@@ -68,7 +65,6 @@ class CustomVertexAIWidget extends HTMLElement {
         projectId,
         modelId,
         prompt,
-        temperature,
         maxOutputTokens
       );
       return generatedText;
