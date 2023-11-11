@@ -1,53 +1,80 @@
 {
-  "eula": "",
-  "vendor": "Danish",
-  "license": "",
-  "id": "com.danish.sap.sac.chatgpt",
-  "version": "1.0.0",
-  "name": "chatGPT SAC",
-  "newInstancePrefix": "chatGPTInSAC",
-  "description": "A custom widget to integrate chatGPT3 in SAC Analytic application",
-  "webcomponents": [
-    {
-      "kind": "main",
-      "tag": "custom-widget",
-      "url": "https://dmeraj.github.io/integrating-chatGPT3-in-SAC/main.js",
-      "integrity": "",
-      "ignoreIntegrity": true
-    }
-  ],
-  "properties": {
-    "width": {
-      "type": "integer",
-      "default": 1
-    },
-    "height": {
-      "type": "integer",
-      "default": 1
-    }
-  },
-  "methods": {
-    "post": {
-      "description": "Wrapper for jQuery post",
-      "parameters": [
+    "id": "com.Johnson.sap.sac.genAI",
+    "version": "1.2.0",
+    "name": "GenAI Widget",
+    "description": "Gen AI Custom Widget for SAC.",
+    "newInstancePrefix": "GenAIWidget",
+    "vendor": "Johnson Olanrewaju",
+    "eula": "",
+    "license": "",
+    "icon": "https:\/\/raw.githubusercontent.com\/SAP-Custom-Widget\/ChatGptWidget\/main\/icon.png",
+    "webcomponents": [
         {
-          "name": "APIKey",
-          "type": "string",
-          "description": ""
+            "kind": "main",
+            "tag": "com.Johnson.sap.sac.genAI",
+            "url": "      "url": "https://ojohnsonolanrewaju.github.io/ChatGPT_SAC_CustomWidget/chatGPT_SAC.js",
+",
+            "integrity": "",
+            "ignoreIntegrity": true
         },
         {
-          "name": "endPoint",
-          "type": "string",
-          "description": ""
-        },
-        {
-          "name": "prompt",
-          "type": "string",
-          "description": ""
+            "kind": "builder",
+            "tag": "com.Johnson.sap.sac.genAI",
+            "url": "      "url": "https://ojohnsonolanrewaju.github.io/ChatGPT_SAC_CustomWidget/chatGPT_SAC.js",
+",
+            "integrity": "",
+            "ignoreIntegrity": true
         }
-      ],
-      "returnType": "string"
+    ],
+    "properties": {
+        "apiKey": {
+            "description": "Api Key of ChatGPT",
+            "type": "string",
+            "default": ""
+        },
+        "max_tokens": {
+            "description": "Result Max Length",
+            "type": "integer",
+            "default": 1024
+        }
+    },
+    "methods": {
+        "setApiKey": {
+            "description": "Set Api Key of ChatGPT",
+            "parameters": [
+                {
+                    "name": "apiKey",
+                    "type": "string",
+                    "description": "Api Key of ChatGPT"
+                }
+            ],
+            "body": "this.apiKey = apiKey;"
+        },
+        "getApiKey": {
+            "returnType": "string",
+            "description": "Return Api Key of ChatGPT",
+            "body": "return this.apiKey;"
+        },
+        "setMax_tokens": {
+            "description": "Set Result Max Length",
+            "parameters": [
+                {
+                    "name": "max_tokens",
+                    "type": "integer",
+                    "description": "Result Max Length"
+                }
+            ],
+            "body": "this.max_tokens = max_tokens;"
+        },
+        "getMax_tokens": {
+            "returnType": "integer",
+            "description": "Return Result Max Length",
+            "body": "return this.max_tokens;"
+        }
+    },
+    "events": {
+        "onClick": {
+            "description": "User Clicked."
+        }
     }
-  },
-  "events": {}
 }
