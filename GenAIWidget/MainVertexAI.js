@@ -30,7 +30,7 @@ const generateText = async (
           ],
           parameters: {
             struct_val: {
-              temperature: { float_val: temperature },
+              temperature: { int_val: temperature },
               maxOutputTokens: { int_val: maxOutputTokens },
               // Add other parameters as needed
             },
