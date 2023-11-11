@@ -7,74 +7,72 @@
   "vendor": "Johnson Olanrewaju",
   "eula": "",
   "license": "",
-  "icon": "https:\/\/raw.githubusercontent.com\/SAP-Custom-Widget\/ChatGptWidget\/main\/icon.png",
+  "icon": "https://raw.githubusercontent.com/SAP-Custom-Widget/ChatGptWidget/main/icon.png",
   "webcomponents": [
-      {
-          "kind": "main",
-          "tag": "com.Johnson.sap.sac.genAI",
-          "url":  "https://ojohnsonolanrewaju.github.io/ChatGPT_SAC_CustomWidget/chatGPT_SAC.js"
-,
-          "integrity": "",
-          "ignoreIntegrity": true
-      },
-      {
-          "kind": "builder",
-          "tag": "com.Johnson.sap.sac.genAI",
-          "url":"https://ojohnsonolanrewaju.github.io/ChatGPT_SAC_CustomWidget/chatGPT_SAC.js"
-,
-          "integrity": "",
-          "ignoreIntegrity": true
-      }
+    {
+      "kind": "main",
+      "tag": "com.Johnson.sap.sac.genAI",
+      "url": "https://ojohnsonolanrewaju.github.io/ChatGPT_SAC_CustomWidget/chatGPT_SAC.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    },
+    {
+      "kind": "builder",
+      "tag": "com.Johnson.sap.sac.genAI",
+      "url": "https://ojohnsonolanrewaju.github.io/ChatGPT_SAC_CustomWidget/ChatGptWidget_Builder.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
   ],
   "properties": {
-      "apiKey": {
-          "description": "Api Key of ChatGPT",
-          "type": "string",
-          "default": ""
-      },
-      "max_tokens": {
-          "description": "Result Max Length",
-          "type": "integer",
-          "default": 1024
-      }
+    "apiKey": {
+      "description": "Api Key of ChatGPT",
+      "type": "string",
+      "default": ""
+    },
+    "max_tokens": {
+      "description": "Result Max Length",
+      "type": "integer",
+      "default": 1024
+    }
   },
   "methods": {
-      "setApiKey": {
-          "description": "Set Api Key of ChatGPT",
-          "parameters": [
-              {
-                  "name": "apiKey",
-                  "type": "string",
-                  "description": "Api Key of ChatGPT"
-              }
-          ],
-          "body": "this.apiKey = apiKey;"
-      },
-      "getApiKey": {
-          "returnType": "string",
-          "description": "Return Api Key of ChatGPT",
-          "body": "return this.apiKey;"
-      },
-      "setMax_tokens": {
-          "description": "Set Result Max Length",
-          "parameters": [
-              {
-                  "name": "max_tokens",
-                  "type": "integer",
-                  "description": "Result Max Length"
-              }
-          ],
-          "body": "this.max_tokens = max_tokens;"
-      },
-      "getMax_tokens": {
-          "returnType": "integer",
-          "description": "Return Result Max Length",
-          "body": "return this.max_tokens;"
-      }
+    "setApiKey": {
+      "description": "Set Api Key of ChatGPT",
+      "parameters": [
+        {
+          "name": "apiKey",
+          "type": "string",
+          "description": "Api Key of ChatGPT"
+        }
+      ],
+      "body": "this.apiKey = apiKey;"
+    },
+    "getApiKey": {
+      "returnType": "string",
+      "description": "Return Api Key of ChatGPT",
+      "body": "return this.apiKey;"
+    },
+    "setMax_tokens": {
+      "description": "Set Result Max Length",
+      "parameters": [
+        {
+          "name": "max_tokens",
+          "type": "integer",
+          "description": "Result Max Length"
+        }
+      ],
+      "body": "this.max_tokens = max_tokens;"
+    },
+    "getMax_tokens": {
+      "returnType": "integer",
+      "description": "Return Result Max Length",
+      "body": "return this.max_tokens;"
+    }
   },
   "events": {
-      "onClick": {
-          "description": "User Clicked."
-      }
+    "onClick": {
+      "description": "User Clicked."
+    }
   }
 }
