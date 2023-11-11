@@ -135,5 +135,5 @@
       return this._shadowRoot.getElementById("builder_max_tokens").value;
     }
   }
-  customElements.define("com.Johnson.sap.sac.genAI", ChatGptWidgetBuilderPanel);
+  customElements.define("com.johnson.sap.sac.genai", ChatGptWidgetBuilderPanel);
 })();
