@@ -119,5 +119,5 @@
       this.initMain();
     }
   }
-  customElements.define("com.rohitchouhan.sap.chatgptwidget", Widget);
+  customElements.define("com-rohitchouhan-sap-chatgptwidget", Widget);
 })();
