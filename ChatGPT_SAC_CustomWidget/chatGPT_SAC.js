@@ -119,5 +119,5 @@
       this.initMain();
     }
   }
-  customElements.define("com.johnson.sap.sac.genai", Widget);
+  customElements.define("com.rohitchouhan.sap.chatgptwidget", Widget);
 })();
