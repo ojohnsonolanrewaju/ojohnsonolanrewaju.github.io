@@ -63,7 +63,7 @@
     constructor() {
       super();
       let shadowRoot = this.attachShadow({
-        mode: "open"
+        mode: "open",
       });
       shadowRoot.appendChild(template.content.cloneNode(true));
       this._props = {};
@@ -74,12 +74,9 @@
     async initMain() {
       const generatedText = this.shadowRoot.getElementById("generated-text");
       generatedText.value = "";
-      const {
-        apiKey
-      } = this._props || "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";
-      const {
-        max_tokens
-      } = this._props || 1024;
+      const { apiKey } =
+        this._props || "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";
+      const { max_tokens } = this._props || 1024;
       const generateButton = this.shadowRoot.getElementById("generate-button");
       generateButton.addEventListener("click", async () => {
         const promptInput = this.shadowRoot.getElementById("prompt-input");
@@ -90,23 +87,21 @@
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer " + apiKey
+            Authorization: "Bearer " + apiKey,
           },
           body: JSON.stringify({
-            "model": "text-davinci-002",
-            "prompt": prompt,
-            "max_tokens": parseInt(max_tokens),
-            "n": 1,
-            "temperature": 0.5
-          })
+            model: "text-davinci-002",
+            prompt: prompt,
+            max_tokens: parseInt(max_tokens),
+            n: 1,
+            temperature: 0.5,
+          }),
         });
 
         if (response.status === 200) {
-          const {
-            choices
-          } = await response.json();
+          const { choices } = await response.json();
           const generatedTextValue = choices[0].text;
-          generatedText.value = generatedTextValue.replace(/^\n+/, '');
+          generatedText.value = generatedTextValue.replace(/^\n+/, "");
         } else {
           const error = await response.json();
           alert("OpenAI Response: " + error.error.message);
@@ -117,12 +112,12 @@
     onCustomWidgetBeforeUpdate(changedProperties) {
       this._props = {
         ...this._props,
-        ...changedProperties
+        ...changedProperties,
       };
     }
     onCustomWidgetAfterUpdate(changedProperties) {
       this.initMain();
     }
   }
-  customElements.define("com.Johnson.sap.sac.genAI", Widget);
+  customElements.define("com.johnson.sap.sac.genai", Widget);
 })();
