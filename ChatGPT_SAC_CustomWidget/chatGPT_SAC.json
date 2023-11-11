@@ -11,7 +11,7 @@
   "webcomponents": [
     {
       "kind": "main",
-      "tag": "com.rohitchouhan.sap.chatgptwidget",
+      "tag": "com-rohitchouhan-sap-chatgptwidget",
       "url": "https://ojohnsonolanrewaju.github.io/ChatGPT_SAC_CustomWidget/chatGPT_SAC.js",
       "integrity": "",
       "ignoreIntegrity": true
