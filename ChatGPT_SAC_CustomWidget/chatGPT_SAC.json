@@ -1,5 +1,5 @@
 {
-  "id": "com.johnson.sap.sac.genai",
+  "id": "com.rohitchouhan.sap.chatgptwidget",
   "version": "1.2.0",
   "name": "GenAI Widget",
   "description": "Gen AI Custom Widget for SAC.",
@@ -11,14 +11,14 @@
   "webcomponents": [
     {
       "kind": "main",
-      "tag": "com.johnson.sap.sac.genai",
+      "tag": "com.rohitchouhan.sap.chatgptwidget",
       "url": "https://ojohnsonolanrewaju.github.io/ChatGPT_SAC_CustomWidget/chatGPT_SAC.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "builder",
-      "tag": "com.johnson.sap.sac.genai",
+      "tag": "com-rohitchouhan-sap-chatgptwidget-builder",
       "url": "https://ojohnsonolanrewaju.github.io/ChatGPT_SAC_CustomWidget/ChatGptWidget_Builder.js",
       "integrity": "",
       "ignoreIntegrity": true
