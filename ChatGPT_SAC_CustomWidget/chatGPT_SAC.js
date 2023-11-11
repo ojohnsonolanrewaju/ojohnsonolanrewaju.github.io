@@ -75,7 +75,7 @@
       const generatedText = this.shadowRoot.getElementById("generated-text");
       generatedText.value = "";
       const { apiKey } =
-        this._props || "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";
+        this._props || "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";
       const { max_tokens } = this._props || 1024;
       const generateButton = this.shadowRoot.getElementById("generate-button");
       generateButton.addEventListener("click", async () => {
