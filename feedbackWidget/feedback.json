@@ -1,0 +1,41 @@
+{
+  "name": "Feedback Test Widget One",
+  "description": "Feedback Test Widget One",
+  "newInstancePrefix": "FeedbackTestWidgetOne",
+  "eula": "",
+  "vendor": "BMW AG",
+  "license": "",
+  "id": "com.bmw.ux.feedback.one",
+  "version": "1.0.0",
+  "icon": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "feedback-test-widget-one-1",
+      "url": "https://ux.bmwgroup.net/apps/sac-custom-widgets/feedback-test-widget-one-1.0.0.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "projectId": {
+      "description": "Project ID",
+      "type": "string",
+      "default": ""
+    }
+  },
+  "methods": {
+    "setProjectId": {
+      "description": "Set Project ID of Feedback Test Widget One",
+      "parameters": [
+        {
+          "name": "projectId",
+          "type": "string",
+          "description": "Project ID widget"
+        }
+      ],
+      "body": "this.projectId = projectId;"
+    }
+  },
+  "events": {}
+}
