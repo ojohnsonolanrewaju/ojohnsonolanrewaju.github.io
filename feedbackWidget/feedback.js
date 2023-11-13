@@ -240,7 +240,7 @@ InAppFeedback = {
       100,
       "r",
       this.projectId,
-      "https://zn9u2hkxomqcovlju-bmwux.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_9U2HkXOMQCovLjU",
+      "https://zn9u2hkxomqcovlju-bmwux.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_9U2HkXOMQCovLjU"
       // "https://" +
       //   this.projectId +
       //   "-bmwux.siteintercept.qualtrics.com/SIE/?Q_ZID" +
