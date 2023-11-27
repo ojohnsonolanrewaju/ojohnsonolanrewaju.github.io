@@ -1,0 +1,23 @@
+{
+  "name": "Feedback Test Widget One",
+  "description": "Feedback Test Widget One",
+  "newInstancePrefix": "FeedbackTestWidgetOne",
+  "eula": "",
+  "vendor": "BMW AG",
+  "license": "",
+  "id": "com.bmw.ux.feedback.one",
+  "version": "1.0.0",
+  "icon": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "feedback-test-widget-one-1",
+      "url": "https://ojohnsonolanrewaju.github.io/OriginalFeedbackWidget/Original_Feedback.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {},
+  "methods": {},
+  "events": {}
+}
