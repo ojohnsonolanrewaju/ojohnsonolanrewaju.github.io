@@ -105,7 +105,7 @@
     padding: 0 var(--ds-space-inline-end-button-sm) 0 var(--ds-space-inline-start-button-sm) !important;
 }
 
-feedback-test-widget-one-1 {
+feedback-test-widget-one {
     background-color: var(--ds-color-surface-page);
     display: flex;
     align-items: center;
@@ -131,7 +131,7 @@ feedback-test-widget-one-1 {
     }
   }
 
-  customElements.define('feedback-test-widget-one-1', FeedbackTestWidgetOne);
+  customElements.define('feedback-test-widget-one', FeedbackTestWidgetOne);
 })();
 
 // Global object with functions that retrieve embedded data
