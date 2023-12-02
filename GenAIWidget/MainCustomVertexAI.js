@@ -1,39 +1,19 @@
-const vertexAIAPIUrl = "https://us-central1-aiplatform.googleapis.com/v1"; // Update with your Vertex AI API URL
-
-var vertexAIAjaxCall = (
-  apiKey,
-  projectId,
-  modelId,
-  prompt,
-  temperature,
-  maxOutputTokens
-) => {
+var ajaxCall = (key, url, prompt) => {
   return new Promise((resolve, reject) => {
     $.ajax({
-      url: `${vertexAIAPIUrl}/projects/${projectId}/locations/us-central1/publishers/google/models/${modelId}:serverStreamingPredict`,
+      url: url,
       type: "POST",
       dataType: "json",
       data: JSON.stringify({
-        inputs: [
-          {
-            struct_val: {
-              prompt: {
-                string_val: [prompt],
-              },
-            },
-          },
-        ],
-        parameters: {
-          struct_val: {
-            temperature: { float_val: temperature },
-            maxOutputTokens: { int_val: maxOutputTokens },
-            // Add other parameters here if needed
-          },
-        },
+        model: "text-bison",
+        prompt: prompt,
+        max_tokens: 1024,
+        n: 1,
+        temperature: 0.5,
       }),
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${key}`,
       },
       crossDomain: true,
       success: function (response, status, xhr) {
@@ -48,30 +28,26 @@ var vertexAIAjaxCall = (
   });
 };
 
+const url = "https://us-central1-aiplatform.googleapis.com/v1";
+
 (function () {
   const template = document.createElement("template");
   template.innerHTML = `
-    <style>
-      /* Add your custom styles here */
-    </style>
-    <div id="root" style="width: 100%; height: 100%;">
-    </div>
-  `;
-
-  class MainCustomVertexAI extends HTMLElement {
-    async generateText(apiKey, projectId, modelId, prompt, maxOutputTokens) {
-      const temperature = 0.5; // Hardcoded temperature parameter
-      const { response } = await vertexAIAjaxCall(
+        <style>
+        </style>
+        <div id="root" style="width: 100%; height: 100%;">
+        </div>
+      `;
+  class MainWebComponent extends HTMLElement {
+    async post(apiKey, endpoint, prompt) {
+      const { response } = await ajaxCall(
         apiKey,
-        projectId,
-        modelId,
-        prompt,
-        temperature,
-        maxOutputTokens
+        `${url}/${endpoint}/locations/us-central1/`,
+        prompt
       );
-      return response.outputs[0].structVal.content.stringVal[0];
+      //console.log(response.choices[0].text);
+      return response.content[0].text;
     }
   }
-
-  customElements.define("custom-vertex-ai-widget", MainCustomVertexAI);
+  customElements.define("custom-widget", MainWebComponent);
 })();
