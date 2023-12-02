@@ -28,7 +28,7 @@ var ajaxCall = (key, url, prompt) => {
   });
 };
 
-const url = "https://us-central1-aiplatform.googleapis.com/v1";
+const url = "https://us-central1-aiplatform.googleapis.com/v1/projects";
 
 (function () {
   const template = document.createElement("template");
