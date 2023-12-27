@@ -1,0 +1,13 @@
+{
+  "address": "4122973e-0b76-40f5-80a8-768b39fe6e96.hana.prod-eu10.hanacloud.ondemand.com",
+  "port": "443",
+  "user": "S_HACK2BUILD_LOCAL#DEMOUSER",
+  "password": "v^#M[r8C*?/t$AHHW]RTKGA_+]k-r+<.",
+  "schema": "S_HACK2BUILD_LOCAL",
+  "encrypt": "true",
+  "sslValidateCertificate": "false",
+  "disableCloudRedirect": "true",
+  "communicationTimeout": "0",
+  "autocommit": "true",
+  "sslUseDefaultTrustStore": "true"
+}
