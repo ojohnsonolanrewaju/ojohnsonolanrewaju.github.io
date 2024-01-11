@@ -7,7 +7,7 @@
 				<table>
 					<tr>
 						<td>URL</td>
-						<td><input id="urlinput" type="text" size="10" maxlength="255"></td>
+						<td><input id="urlinput" type="text" size="60" maxlength="255"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
