@@ -129,8 +129,16 @@ feedback-test-widget-one-1 {
         QSI.API.run();
       }
     }
+    onCustomWidgetBeforeUpdate(changedProperties) {
+      this._props = { ...this._props, ...changedProperties };
+    }
+    
+    onCustomWidgetAfterUpdate(changedProperties) {
+      if ("url" in changedProperties) {
+        this.style["url"] = changedProperties["url"];
+      }
+    }
   }
-
   customElements.define("feedback-test-widget-one-1", FeedbackTestWidgetOne);
 })();
 
