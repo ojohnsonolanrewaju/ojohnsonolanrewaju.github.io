@@ -14,11 +14,11 @@ I'm a passionate Data Professional specializing in cutting-edge BI, data enginee
     <!-- <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/46779103" width="100"> -->
     <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/48086053" width="100">
     <img src="https://ojohnsonolanrewaju.github.io/Pics/SACPBadge.png" width="100">
-    <img src="https://www.credly.com/earner/earned/badge/4bae1aa5-aef8-4d8e-a41a-cad8b157b5b5" width="100">
-    <img src="https://www.credly.com/earner/earned/badge/76d5e2ff-498a-41ec-9354-5d116513a3e5" width="100">
-    <img src="https://www.credly.com/earner/earned/badge/c06a50da-d75a-41df-8077-438d7791e1e2" width="100">
-    <img src="https://www.credly.com/earner/earned/badge/bb46ea81-2361-4ffb-ba1f-8a369909bb24" width="100">
-    <img src="https://www.credly.com/earner/earned/badge/99313ee1-1e58-40a1-ad0c-bb84b91f3a6a" width="100">
+    <img src="https://ojohnsonolanrewaju.github.io/Pics/awards-and-recognition-hack2build-hackathon-finalist-award.png" width="100">
+    <img src="https://ojohnsonolanrewaju.github.io/Pics/exploring-sap-datasphere-record-of-achievement.png" width="100">
+    <img src="https://ojohnsonolanrewaju.github.io/Pics/exploring-sap-s-4hana-embedded-analytics-record-of-.png" width="100">
+    <img src="https://ojohnsonolanrewaju.github.io/Pics/sap-certified-application-associate-sap-analytics-cloud.12.png" width="100">
+    <img src="https://ojohnsonolanrewaju.github.io/Pics/solution-knowledge-sap-analytics-cloud-performance-best-practices-and-troubleshooting (1).png" width="100">
     <!-- <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/78740854" width="100">
     <img src="https://storage.googleapis.com/bkt-static-content/microsoft-certified-azure-fundamentals.png" width="100">
     <img src="https://storage.googleapis.com/bkt-static-content/hashicorp-certified-terraform-associate-002.png" width="100"> -->
