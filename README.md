@@ -13,7 +13,7 @@ I'm a passionate Data Professional specializing in cutting-edge BI, data enginee
     <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/45954152" width="100">
     <!-- <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/46779103" width="100"> -->
     <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/48086053" width="100">
-    <img src="https://www.credly.com/earner/earned/badge/9c3c35b1-2859-4714-b994-8a3c9a76967d" width="100">
+    <img src="https://images.app.goo.gl/F2CPhY9ot4oCZ3M4A" width="100">
     <img src="https://www.credly.com/earner/earned/badge/4bae1aa5-aef8-4d8e-a41a-cad8b157b5b5" width="100">
     <img src="https://www.credly.com/earner/earned/badge/76d5e2ff-498a-41ec-9354-5d116513a3e5" width="100">
     <img src="https://www.credly.com/earner/earned/badge/c06a50da-d75a-41df-8077-438d7791e1e2" width="100">
