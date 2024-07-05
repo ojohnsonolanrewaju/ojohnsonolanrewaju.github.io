@@ -4,7 +4,26 @@
 
 ## Fully Certified (3x) SAP Analytics Cloud Developer and Google Cloud Certified Professional Data Engineer 🚀
 
-I'm a passionate Data Professional specializing in cutting-edge BI, data engineering, machine learning, and AI. As a certified SAP Analytics and Google Cloud Data Engineer, I bring a powerful blend of technological expertise and domain knowledge in business processes, logistics, and supply chain. My mission is to creatively implement next-gen data solutions, leveraging modern tools and methodologies. With a keen eye on achieving organizational goals and enhancing enterprise performance, I am at the forefront of driving impactful change through data.
+With over 5 years of cross-industry experience, I am a data professional with a passion for turning raw data into actionable insights. I thrive in the end-to-end data transformation journey, from getting my hands dirty with data engineering (ETL, modelling) to developing compelling visualizations as a data analyst. But my curiosity doesn't stop there. I also love digging deeper with data science techniques, using AI and ML to unlock predictive insights that help businesses not just understand their past and present, but also forecast the future. Ultimately, my goal is to help businesses with data-driven decision making processes, from enterprise performance evaluation to enterprise planning using innovative technologies.
+
+I leverage my knowledge and expertise in cutting-edge technologies like Data Engineering, Business Intelligence (BI), Machine Learning and Generative AI to deliver valuable solutions such as:
+
+- Design & build data pipelines using GCP services like BigQuery, Dataflow, Pub/Sub, and Cloud Storage to ensure efficient data flow.
+- Develop data flow, model, data integration leveraging SAP BW/4HANA and SAP Datasphere for critical business data for impactful decisions.
+- Analyze, visualize, plan, and predict with SAP Analytics Cloud, unlocking data-driven insights for smarter decision-making.
+- Develop & implement Generative AI applications using Google Cloud Platform Vertex AI to automate tasks and generate content based on private data and knowledge base.
+- Apply my acquired domain knowledge in business processes to deliver targeted solutions.
+
+Tech Stack:
+
+Google Cloud Platform (GCP) - Vertex AI, BigQuery, Dataflow, Pub/Sub, Cloud Storage
+SAP Analytics Cloud, SAP BW/4HANA & SAP Datasphere
+Python programming, JavaScript, SQL
+Microsoft Power BI & Excel Power Query
+
+I hold certifications in both SAP Analytics and Google Cloud Data Engineering, demonstrating my commitment to continuous learning and staying ahead of the curve. My blend of technical expertise and business acumen allows me to translate data into actionable insights that drive intelligent & better decisions.
+
+Connect with me! I'm always eager to collaborate on innovative data-driven projects and explore the endless possibilities of transforming businesses through data.
 
 ## Certifications
 
