@@ -1,6 +1,6 @@
 <!-- ![Header Image](link-to-your-image) -->
 
-# Hello, I'm [Johnson Olumide Olanrewaju](https://www.linkedin.com/in/olumidejohnsono/) 👋
+# Hello, I'm [Olumide Johnson Olanrewaju](https://www.linkedin.com/in/olumidejohnsono/) 👋
 
 ## Fully Certified (3x) SAP Analytics Cloud Developer and Google Cloud Certified Professional Data Engineer 🚀
 
