@@ -1,3 +1,39 @@
+const loadGoogleApiClient = () => {
+  return new Promise((resolve, reject) => {
+    // Dynamically load the Google API client library
+    const script = document.createElement("script");
+    script.src = "https://apis.google.com/js/api.js";
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error("Failed to load Google API Client library"));
+    document.head.appendChild(script);
+  });
+};
+
+const initializeAuth = async () => {
+  await loadGoogleApiClient();
+
+  return new Promise((resolve, reject) => {
+    gapi.load("client:auth2", async () => {
+      try {
+        await gapi.client.init({
+          clientId: "1036848270469-1nj9do9m6a3vgoab8ni7cqg7krqcs5po.apps.googleusercontent.com.apps.googleusercontent.com", // Replace with your OAuth Client ID
+          scope: "https://www.googleapis.com/auth/cloud-platform",
+        });
+
+        const authInstance = gapi.auth2.getAuthInstance();
+        if (!authInstance.isSignedIn.get()) {
+          await authInstance.signIn();
+        }
+        const currentUser = authInstance.currentUser.get();
+        const accessToken = currentUser.getAuthResponse().access_token;
+        resolve(accessToken);
+      } catch (error) {
+        reject(error);
+      }
+    });
+  });
+};
+
 const geminiCall = (accessToken, prompt) => {
   return new Promise((resolve, reject) => {
     const timestamp = new Date().toISOString(); // Add timestamp for variability
@@ -88,12 +124,14 @@ const geminiCall = (accessToken, prompt) => {
       this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
-    async post(accessToken, prompt) {
+    async post(prompt) {
       const rootElement = this.shadowRoot.getElementById("root");
       try {
         rootElement.textContent = "Processing...";
         console.log("Received Prompt from SAC:", prompt); // Debug prompt received from SAC
 
+        // Authenticate and get Access Token
+        const accessToken = await initializeAuth();
         const response = await geminiCall(accessToken, prompt);
 
         rootElement.textContent = response || "No valid response received.";
@@ -101,11 +139,7 @@ const geminiCall = (accessToken, prompt) => {
       } catch (error) {
         console.error("Error during API call:", error);
         let errorMessage = "Error occurred while processing the request.";
-        if (error.status === 429) {
-          errorMessage = "Rate limit exceeded. Please try again later.";
-        } else if (error.status === 401) {
-          errorMessage = "Invalid access token. Please check your credentials.";
-        } else if (error.response) {
+        if (error.response) {
           errorMessage = `Error: ${error.response}`;
         }
         rootElement.textContent = errorMessage;
