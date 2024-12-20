@@ -16,7 +16,7 @@ const initializeAuth = async () => {
     gapi.load("client:auth2", async () => {
       try {
         await gapi.client.init({
-          clientId: "1036848270469-1nj9do9m6a3vgoab8ni7cqg7krqcs5po.apps.googleusercontent.com.apps.googleusercontent.com", // Replace with your OAuth Client ID
+          clientId: "1036848270469-vbtmnr4760u49dd43f7tgehsn58cqbmt.apps.googleusercontent.com.apps.googleusercontent.com", // Replace with your OAuth Client ID
           scope: "https://www.googleapis.com/auth/cloud-platform",
         });
 
