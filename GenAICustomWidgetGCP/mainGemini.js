@@ -152,5 +152,5 @@ const geminiCall = (accessToken, prompt) => {
     }
   }
 
-  customElements.define("custom-widget", MainWebComponent);
+  customElements.define("custom-widget2", MainWebComponent);
 })();
