@@ -1,0 +1,54 @@
+{
+    "eula": "",
+    "vendor": "danish",
+    "license": "",
+    "id": "com.danish.sap.sac.chatgpt4",
+    "version": "1.0.0",
+    "name": "chatGPT4 SAC",
+    "newInstancePrefix": "chatGPTInSAC",
+    "description": "A custom widget to integrate chatGPT4 in SAC Analytic application",
+    "webcomponents": [
+      {
+        "kind": "main",
+        "tag": "custom-widget",
+        "url": "https://dl2606.github.io/MasterThesis/main.js",
+        "integrity": "",
+        "ignoreIntegrity": true
+      }
+    ],
+    "properties": {
+          "width": {
+              "type": "integer",
+              "default": 1
+          },
+          "height": {
+              "type": "integer",
+              "default": 1
+          }
+    },
+    "methods": {
+          "post": {
+              "description": "Wrapper for jQuery post",
+              "parameters": [
+                  {
+                      "name": "APIKey",
+                      "type": "string",
+                      "description": ""
+                  },
+                  {
+                      "name": "endPoint",
+                      "type": "string",
+                      "description": ""
+                  },
+                  {
+                      "name": "prompt",
+                      "type": "string",
+                      "description": ""
+                  }
+              ],
+              "returnType": "string"
+          }
+    },
+    "events": {
+    }
+  }
