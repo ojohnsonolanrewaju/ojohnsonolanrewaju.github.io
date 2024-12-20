@@ -1,10 +1,10 @@
 const loadGoogleApiClient = () => {
   return new Promise((resolve, reject) => {
-    // Dynamically load the Google API client library
+    // Dynamically load the Google GIS library
     const script = document.createElement("script");
-    script.src = "https://apis.google.com/js/api.js";
+    script.src = "https://accounts.google.com/gsi/client";
     script.onload = () => resolve();
-    script.onerror = () => reject(new Error("Failed to load Google API Client library"));
+    script.onerror = () => reject(new Error("Failed to load Google GIS library"));
     document.head.appendChild(script);
   });
 };
@@ -13,24 +13,25 @@ const initializeAuth = async () => {
   await loadGoogleApiClient();
 
   return new Promise((resolve, reject) => {
-    gapi.load("client:auth2", async () => {
-      try {
-        await gapi.client.init({
-          clientId: "1036848270469-vbtmnr4760u49dd43f7tgehsn58cqbmt.apps.googleusercontent.com", // Replace with your OAuth Client ID
-          scope: "https://www.googleapis.com/auth/cloud-platform",
-        });
+    try {
+      // Initialize the GIS client
+      const tokenClient = google.accounts.oauth2.initTokenClient({
+        client_id: "1036848270469-vbtmnr4760u49dd43f7tgehsn58cqbmt.apps.googleusercontent.com", // Replace with your OAuth Client ID
+        scope: "https://www.googleapis.com/auth/cloud-platform",
+        callback: (response) => {
+          if (response.error) {
+            reject(new Error(`Authorization failed: ${response.error}`));
+          } else {
+            resolve(response.access_token);
+          }
+        },
+      });
 
-        const authInstance = gapi.auth2.getAuthInstance();
-        if (!authInstance.isSignedIn.get()) {
-          await authInstance.signIn();
-        }
-        const currentUser = authInstance.currentUser.get();
-        const accessToken = currentUser.getAuthResponse().access_token;
-        resolve(accessToken);
-      } catch (error) {
-        reject(error);
-      }
-    });
+      // Trigger the token request
+      tokenClient.requestAccessToken();
+    } catch (error) {
+      reject(error);
+    }
   });
 };
 
